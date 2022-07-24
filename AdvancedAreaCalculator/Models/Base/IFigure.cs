@@ -5,6 +5,6 @@ public interface IFigure
     /// <summary>
     /// Figure area
     /// </summary>
-    dynamic Area { get; }
+   public dynamic Area { get; }
     
 }

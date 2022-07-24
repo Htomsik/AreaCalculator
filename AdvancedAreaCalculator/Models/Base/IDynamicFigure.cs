@@ -1,6 +1,6 @@
 ﻿namespace AreaCalculator.Models.Base;
 
-public interface IDynamicFigure<T>
+public interface IDynamicFigure<T>:IFigure
 {
     
     /// <summary>
@@ -9,13 +9,13 @@ public interface IDynamicFigure<T>
     dynamic Area { get; }
     
     /// <summary>
-    /// Change Notifier
+    /// Change notifier
     /// </summary>
     public Action? OnFigureChanged { get; set; }
 
     /// <summary>
     /// Change figure parameters
     /// </summary>
-    /// <param name="newParams">figure parameter</param>
-    public  void ChangeParameter(T newParams);
+    /// <param name="newParams">figure new parameters</param>
+    public void ChangeParameter(T newParams);
 }

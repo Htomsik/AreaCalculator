@@ -33,7 +33,7 @@ public abstract class BaseDynamicFigure<T>:IDynamicFigure<T>
 
     protected BaseDynamicFigure()
     {
-        AreaChanged();
+        _area = new Lazy<dynamic>(CalculateArea);
     }
 
     
@@ -41,7 +41,7 @@ public abstract class BaseDynamicFigure<T>:IDynamicFigure<T>
 
     public abstract void ChangeParameter(T newParams);
 
-    protected void AreaChanged()
+    protected void FigureChanged()
     {
         _area = new Lazy<dynamic>(CalculateArea);
         OnFigureChanged?.Invoke();

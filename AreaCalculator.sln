@@ -1,8 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AreaCalculator", "AreaCalculator\AreaCalculator.csproj", "{430A52B2-74AC-4F03-A954-331CDF7F2AAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedAreaCalculator", "AdvancedAreaCalculator\AdvancedAreaCalculator.csproj", "{430A52B2-74AC-4F03-A954-331CDF7F2AAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AreaCalculatorTests", "AreaCalculatorTests\AreaCalculatorTests.csproj", "{EE6FC5D4-CE1B-4220-BCF4-621613D6DA37}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedAreaCalculatorTests", "AdvancedAreaCalculatorTests\AdvancedAreaCalculatorTests.csproj", "{EE6FC5D4-CE1B-4220-BCF4-621613D6DA37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAreaCalculator", "SimpleAreaCalculator\SimpleAreaCalculator.csproj", "{E719801D-5820-4B96-BD56-0C30BE709B77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAreaCalculatorTests", "SimpleAreaCalculatorTests\SimpleAreaCalculatorTests.csproj", "{892825EF-F805-49EA-A828-141BA4241316}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +22,13 @@ Global
 		{EE6FC5D4-CE1B-4220-BCF4-621613D6DA37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE6FC5D4-CE1B-4220-BCF4-621613D6DA37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE6FC5D4-CE1B-4220-BCF4-621613D6DA37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E719801D-5820-4B96-BD56-0C30BE709B77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E719801D-5820-4B96-BD56-0C30BE709B77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E719801D-5820-4B96-BD56-0C30BE709B77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E719801D-5820-4B96-BD56-0C30BE709B77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{892825EF-F805-49EA-A828-141BA4241316}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{892825EF-F805-49EA-A828-141BA4241316}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{892825EF-F805-49EA-A828-141BA4241316}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{892825EF-F805-49EA-A828-141BA4241316}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

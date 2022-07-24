@@ -103,11 +103,12 @@ public sealed class StaticTriangle:BaseFigure
     /// <summary>
     /// Check triangle exception
     /// </summary>
-    /// <exception cref="ArgumentException">If one of sides less than 0</exception>
+    /// <exception cref="ArgumentNullException">If one of sides less than 0</exception>
+    /// <exception cref="ArgumentOutOfRangeException">If triangle with these sides doesn't exist</exception>
     protected  override void CheckException()
     {
         if (FirstSide < 0 || SecondSide < 0 || ThirdSide < 0)
-            throw new ArgumentException("Sides of triangle can't be less than 0");
+            throw new ArgumentNullException("Sides of triangle can't be less than 0");
         
         if (!(FirstSide + SecondSide > ThirdSide && FirstSide + ThirdSide > SecondSide && SecondSide + ThirdSide > FirstSide))
             throw new ArgumentOutOfRangeException("A triangle with these sides doesn't exist");

@@ -1,6 +1,6 @@
 ﻿namespace AreaCalculator.Models;
 
-public class BabylonianDecimalSqrt:IDecimalSqrt 
+public sealed class BabylonianDecimalSqrt:IDecimalSqrt 
 {
     /// <summary>
     /// Babylonian Sqrt Method for decimal numbers

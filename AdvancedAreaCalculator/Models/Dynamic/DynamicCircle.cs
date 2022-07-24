@@ -1,14 +1,10 @@
 ﻿using AreaCalculator.Models.Base;
 
-namespace AreaCalculator.Models.Dynamic;
+namespace AreaCalculator.Models;
 
 public sealed class DynamicCircle:BaseDynamicFigure<dynamic>
 {
-    #region Fields
-    
-    private const decimal DecimalPi = 3.1415926535897932384626433832m;
-    
-    #endregion
+   
 
     #region Properties
 
@@ -22,7 +18,7 @@ public sealed class DynamicCircle:BaseDynamicFigure<dynamic>
     #region Constructors
 
     /// <summary>
-    /// Circle double
+    /// Dynamic Circle (double type)
     /// </summary>
     /// <param name="radius">Circle double radius</param>
     public DynamicCircle(double radius)
@@ -32,7 +28,7 @@ public sealed class DynamicCircle:BaseDynamicFigure<dynamic>
     }
     
     /// <summary>
-    /// Circle decimal
+    /// Dynamic circle (decimal type)
     /// </summary>
     /// <param name="radius">Circle decimal radius</param>
     public DynamicCircle(decimal radius)
@@ -50,25 +46,23 @@ public sealed class DynamicCircle:BaseDynamicFigure<dynamic>
     /// </summary>
     protected  override dynamic CalculateArea()
     {
-        return Radius is decimal ? DecimalPi * Radius * Radius : Math.PI* Radius * Radius;
+        return Radius is decimal ? GlobalConstants.DecimalPi * Radius * Radius : Math.PI* Radius * Radius;
     }
 
     /// <summary>
     /// Check circle exception
     /// </summary>
-    /// <exception cref="ArgumentException">If Radius less than 0</exception>
+    /// <exception cref="ArgumentNullException">If Radius less than 0</exception>
     protected override void CheckException()
     {
-        
-        if (Radius! < 0) throw new ArgumentException("Radius can't be less than 0");
-        
+        if (Radius! < 0) throw new ArgumentNullException("Radius can't be less than 0");
     }
 
     #endregion
 
 
     /// <summary>
-    /// Change Figure radius (double|decimal types)
+    /// Change circle radius (double|decimal types)
     /// </summary>
     /// <param name="newRadius"></param>
     /// <exception cref="ArgumentException">If parameter type doesn't match the required type</exception>
@@ -80,7 +74,7 @@ public sealed class DynamicCircle:BaseDynamicFigure<dynamic>
         
         Radius = newRadius;
 
-        AreaChanged();
+        FigureChanged();
     }
     
     
